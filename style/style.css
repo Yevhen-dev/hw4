@@ -1,0 +1,265 @@
+:root {
+    --activ-btn-color: #EF075B;
+    --disable-btn-color: #243B93;
+}
+@font-face {
+    font-family: sans;
+    src: url(../fonts/PTSans-Regular.ttf);
+}
+body {
+    min-width: 900px;
+    max-width: 2000px;
+    font-family: sans;
+    background-color: #fbe4ff;
+}
+
+.header{
+    padding: 0 10%;
+    background-color: var(--disable-btn-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__icon{
+    width: 20%;
+}
+.header__nav {
+    width: 80%;
+    font-size: 0.5;
+}
+.header__nav__menu{
+    padding: 0;
+    list-style: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__nav__menu-item {
+    width: 15%;
+    text-align: center;
+}
+.header__nav__menu-item>a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.header__nav__menu-item>a>img {
+    vertical-align: middle;
+    padding-right: 5px;
+}
+.main>h2 {
+    background-color: #BFF0FF;
+    padding: 1% 10%;
+    margin: 0 0 1% 0;
+    font-style: italic;
+    font-weight: 100;
+}
+.main__booking {
+    position: relative;
+    padding: 0 10%;
+}
+.main__booking>a {
+    display: block;
+    padding: 1% 0;
+    color: #222222;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ffffff;
+}
+.main__booking__list{
+    padding: 0;
+    list-style: none;
+}
+.main__booking__list-item {
+    position: relative;
+    background: linear-gradient(90deg, #ADCBD4 0%, #00AEE5 100%);
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 1.5% 0;
+    transition: all 0.5s ease;
+}
+.main__booking__list-item:hover {
+    background: linear-gradient(90deg,#2CBDEB 0, #2CBDEB 100%);
+    box-shadow: 0 0 50px #2CBDEB;
+    cursor: pointer; 
+}
+.main__booking__list-item__description {
+    padding: 0 2.5rem;
+    color: #ffffff;
+    overflow: hidden;
+}
+.main__booking__list-item__description>h3 {
+    font-size: 1.75em;
+    color: #353C57;
+    padding-bottom: 1%;
+    border-bottom: 2px solid #ffffff;
+    margin:0;
+}
+.main__booking__list-item__description>p {
+    height: 100%;
+    padding: 3%;
+    color: black;
+    background-color: #EDFBFF;
+}
+.main__booking__list-item__btn {
+    position: absolute;
+    bottom: 2%;
+    right: -2%;
+    background-color: var(--disable-btn-color);
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+.main__booking__list-item:hover .main__booking__list-item__btn {
+    background-color: var(--activ-btn-color);
+}
+.main__booking__list-item__btn>a {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+.main__booking__list-item__star {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease;
+}
+.main__booking__list-item:hover .main__booking__list-item__star>a>svg>path {
+    fill: #FFF500;
+}
+.main__booking__arrow {
+    position: absolute;
+    bottom: 3%;
+    right: 8%;
+}
+.main__user>h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    background: linear-gradient(90deg, #FFE601 0, #55D6FF 100%);
+    padding: 1% 10%;
+}
+.main__user__card {
+    background: linear-gradient(0deg, #69FFD2 0, #859EFF 100%);
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    margin: 0 10%;
+}
+.main__user__card__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__user__card__left>img {
+    padding-bottom: 10%;
+}
+.main__user__card__left>a {
+    text-decoration: none;
+    display: block;
+    padding: 5% 20%;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: var(--disable-btn-color);
+    margin: 5% 0;
+    transition: all 0.5s ease;
+}
+.main__user__card__left>a:hover {
+    background-color: var(--activ-btn-color);
+}
+.main__user__card__right {
+    width: 50%;
+}
+.main__user__card__right__list {
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 700;
+    font-style: italic;
+}
+.main__user__card__right__list-name,
+.main__user__card__right__list-gender,
+.main__user__card__right__list-birthday,
+.main__user__card__right__list-tel {
+    border-bottom: 2px solid #ffffff; 
+}
+.main__user__card__right__list-email, .main__user__card__right__list-tel {
+    display: flex;
+    align-items: center;
+}
+.main__user__card__right__list-email>a, .main__user__card__right__list-tel>a {
+    text-decoration: none;
+} 
+.main__user__card__right__list-email>a, 
+.main__user__card__right__list-tel>a,
+.main__user__card__right__list-gender>p>span,
+.main__user__card__right__list-birthday>p>span{
+    color: #222222;
+    font-weight: 400;
+    font-style: italic;
+    padding-left: 2%;
+}
+.main__user-exit {
+    text-align: center;
+    padding-top: 2%;
+}
+.main__user-exit_btn {
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    padding: 1% 4%;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: var(--disable-btn-color);
+    transition: all 0.5s ease;
+}
+.main__user-exit_btn:hover {
+    background-color: var(--activ-btn-color);
+}
+.footer>h3 {
+    font-size: 2rem;
+    color: var(--disable-btn-color);
+    font-weight: 400;
+    font-style: italic;
+    background: linear-gradient(90deg, #55D6FF 0,#FFE601 100%);
+    padding: 1% 10%;
+}
+.footer__info {
+    list-style: none;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+}
+.footer__info__contact-tel>p,
+.footer__info__contact-adress>p:first-child,
+.footer__info__email>p {
+    border-bottom: 2px solid #222222;
+}
+.footer__info__contact-tel {
+    padding-bottom: 5%;
+}
+.footer__info__contact-tel>a,
+.footer__info__email>a {
+    text-decoration: none;
+    color: #222222;
+}
+.footer__info__email {
+    width: 20%;
+}
+.footer__bottom {
+    background-color: var(--disable-btn-color);
+    font-size: 1rem;
+}
+.footer__bottom>p {
+    padding: 2% 15%;
+    margin: 0;
+}
+.footer__bottom>p>span {
+    padding-left: 2%;
+}
